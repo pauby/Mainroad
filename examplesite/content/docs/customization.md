@@ -140,6 +140,11 @@ theme = "roadster"
   [Params.widgets.search.input]
     name = "sitesearch"
     pre = ""
+
+[taxonomies]
+  author = "authors" 
+  tag = "tags"
+  category = "categories"
 ```
 
 ### Post Frontmatter Example
