@@ -18,8 +18,8 @@ Thumbs.db
 .LSOverride
 Desktop.ini
 
-# dev 
+# dev
 public/
-config.toml
+hugo.toml
 content/
 .hugo_build.lock
