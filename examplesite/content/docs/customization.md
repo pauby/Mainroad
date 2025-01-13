@@ -27,7 +27,7 @@ and more.
 ### Configuration Example
 ```toml
 baseurl = "https://roadster.pages.dev"
-title = "roadster"
+title = "Roadster"
 languageCode = "en-us"
 # paginate = "10" # DEPRECATED! Use pagination.pagerSize below
 theme = "roadster" 
