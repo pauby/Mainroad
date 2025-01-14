@@ -30,7 +30,7 @@ Or as a submodule:
 ```
 git submodule add https://github.com/mansoorbarri/roadster.git themes/roadster
 ```
-4. Add to your `config.toml`:
+4. Add to your `hugo.toml`:
 ```
 theme = "roadster"
 ```
