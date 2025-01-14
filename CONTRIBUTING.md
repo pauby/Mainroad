@@ -1,4 +1,4 @@
-# Contributing to roadster
+# Contributing to Roadster
 
 **Roadster** welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you're a newcomer to open source and you haven't contributed to other projects or used [Git](https://git-scm.com/) before, you should make yourself familiar before proceeding.
 
@@ -105,4 +105,4 @@ Please respect our Pull Request Acceptance Criteria. For larger changes, you wil
 
 ## License
 
-By contributing to roadster, you agree that your contributions will be licensed under [GPLv2 License](LICENSE.md).
+By contributing to Roadster, you agree that your contributions will be licensed under [GPLv2 License](LICENSE.md).

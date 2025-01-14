@@ -39,7 +39,9 @@ For detailed configuration options and examples, please visit the [documentation
 
 ## Contributing
 
-Found a bug or have an idea for a new feature? Feel free to open an issue or PR. 
+Found a bug? Feel free to open an issue. 
+
+Have an idea for a new feature? Kindly see our [Contributing](https://github.com/stoic-hugo/roadster/blob/master/CONTRIBUTING.md) guidelines to open a PR.
 
 ## License
 
