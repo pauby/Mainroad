@@ -250,13 +250,15 @@ information about localized dates and possible date/time formatting layouts, ple
 ### Multi-Author Support
 #### Adding Multiple Authors to a Post
 To attribute a post to multiple authors, add an `authors` array to the frontmatter of the post. For example:
-```
+
+```toml
 ---
 title: "Example Blog Post"
 date: 2024-01-15
 authors: ["rsmith", "jdoe"]
 ---
 ```
+
 Each author identifier (e.g. `rsmith`, `jdoe`) should correspond to an unique author profile. If no additional information is provided for the author, the system will automatically generate a basic author page that lists all posts by that author.
 
 #### Creating Author Pages
@@ -264,7 +266,8 @@ You can create custom author pages to include additional details about each auth
 
 **File Structure**
 Author pages should be placed in the `/content/authors/` directory. For example:
-```
+
+```toml
 content/
 └── authors/
     ├── rsmith/
@@ -272,9 +275,11 @@ content/
     └── jdoe/
         └── _index.md
 ```
+
 **Frontmatter for Author Pages**  
 The frontmatter for an author page supports detailed customization. Here is an example:
-```
+
+```toml
 ---
 title: "Robert Smith"
 date: 2024-03-19T17:35:59.000Z
@@ -288,6 +293,7 @@ params:
   contact:
     email: "rsmith@example.org"
     phone: "+1 202-555-1213"
+  bio: "" # A short description of the author that appears below an article an on the author-page.
   social:
     - service: "GitHub"
       link: "https://github.com/rsmith"
@@ -297,17 +303,18 @@ params:
 
 This page provides information about Robert Smith and includes a list of blog posts written by him.
 ```
+
 **Explanation of Fields**
 
-    `title`: The display name of the author (used in titles and headings).
-    `params.name`: Allows you to specify the author's full name with optional prefixes like "Dr." or "Prof."
-    `params.contact`: Contact information, such as email and phone number.
-    `params.social`: A list of social media services and corresponding profile links. Expandable as long as the SVG file for the service exists in `layouts/partials/svg/`, named after the service (e.g., `github.svg`).
+- `title`: The display name of the author (used in titles and headings).
+- `params.name`: Allows you to specify the author's full name with optional prefixes like "Dr." or "Prof."
+- `params.contact`: Contact information, such as email and phone number.
+- `params.social`: A list of social media services and corresponding profile links. Expandable as long as the SVG file for the service exists in `layouts/partials/svg/`, named after the service (e.g., `github.svg`).
 
 #### Default Author Pages
 If an author page is not explicitly created, the system will generate a default page for that author, listing all posts attributed to their identifier without additional profile details.
 
-`Important`: Creating a custom author page is optional. Only create one if you need to include detailed information, such as a profile picture, biography, or social links.
+**Important**: Creating a custom author page is optional. Only create one if you need to include detailed information, such as a profile picture, biography, or social links.
 
 ### Thumbnail visibility
 
