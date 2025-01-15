@@ -279,7 +279,7 @@ content/
 **Frontmatter for Author Pages**  
 The frontmatter for an author page supports detailed customization. Here is an example:
 
-```toml
+```yaml
 ---
 title: "Robert Smith"
 date: 2024-03-19T17:35:59.000Z
