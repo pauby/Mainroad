@@ -47,6 +47,4 @@ Have an idea for a new feature? Kindly see our [Contributing](https://github.com
 
 Released under the [GPLv2 license](https://github.com/mansoorbarri/roadster/blob/master/LICENSE.md).
 
-## 
-
-This project is powered by <a href="https://hepton.uk/">Hepton></a>
+This project is powered by [Hepton](https://hepton.uk) 
