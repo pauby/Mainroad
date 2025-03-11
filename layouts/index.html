@@ -6,7 +6,7 @@
 	</div>
 	{{- end }}
 
-	{{ $paginator := (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections).ByDate.Reverse (.Site.Params.pagerSizeIndex | default 5))}}
+	{{ $paginator := (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections).ByDate.Reverse) }}
 	{{ range $paginator.Pages }}
 		{{- .Render "summary" }}
 	{{ end }}
