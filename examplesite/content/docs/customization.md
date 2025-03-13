@@ -112,7 +112,7 @@ theme = "roadster"
   cached = false # activate cache if true
   # Enable parts of social widget
   facebook = "username"
-  twitter = "username"
+  x = "username"
   instagram = "username"
   linkedin = "username"
   telegram = "username"
