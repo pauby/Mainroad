@@ -1,19 +1,24 @@
+{{- define "submenu" }}
+  {{- if .HasChildren }}
+    <ul class="submenu">
+      {{- range .Children }}
+        <li class="submenu__item">
+          <a class="submenu__link" href="{{ .URL }}">{{ .Name }}</a>
+          {{ template "submenu" . }}
+        </li>
+      {{- end }}
+    </ul>
+  {{- end }}
+{{- end }}
+
 {{- if .Site.Menus.main }}
 <nav class="menu">
   <ul class="menu__list">
     {{- range .Site.Menus.main }}
-      {{- if not .Parent }}  <!-- Only show top-level items -->
+      {{- if not .Parent }}
         <li class="menu__item">
           <a class="menu__link" href="{{ .URL }}">{{ .Name }}</a>
-          {{- if .HasChildren }}
-            <ul class="submenu">
-              {{- range .Children }}
-                <li class="submenu__item">
-                  <a class="submenu__link" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-              {{- end }}
-            </ul>
-          {{- end }}
+          {{ template "submenu" . }}
         </li>
       {{- end }}
     {{- end }}

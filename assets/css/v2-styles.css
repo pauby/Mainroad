@@ -5,12 +5,12 @@
   stroke: currentColor;
 }
 
-/* nested menu  */
+/* Nested Menu */
 .menu__item {
   position: relative;
 }
 
-.menu__item:hover .submenu {
+.menu__item:hover > .submenu {
   display: block;
 }
 
@@ -21,17 +21,16 @@
   left: 0;
   list-style: none;
   margin: 0;
-  margin-top:5px;
-  min-width: 180px;
   padding: 0;
   position: absolute;
   top: 100%;
-  width: max-content;
+  width: 200px;
   z-index: 1000;
 }
 
 .submenu__item {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .submenu__link {
@@ -47,4 +46,16 @@
 .submenu__link:hover {
   background: {{ $highlightColor }};
   color: #fff;
+}
+
+.submenu .submenu {
+  display: none;
+  left: 100%;
+  top: 0;
+  width: 200px;
+  z-index: 1001;
+}
+
+.submenu__item:hover > .submenu {
+  display: block;
 }
