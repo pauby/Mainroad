@@ -6,6 +6,8 @@ Roadster: A clean, responsive Hugo theme focused on content, forked from the ori
 
 ![screenshot](https://raw.githubusercontent.com/mansoorbarri/roadster/master/images/screenshot.png)
 
+All the issues and PRs from the original themes were accounted for [here](https://github.com/mansoorbarri/roadster/issues/6#issuecomment-2571663484)
+
 ## Features
 
 + Responsive design
@@ -45,6 +47,5 @@ Have an idea for a new feature? Kindly see our [Contributing](https://github.com
 
 ## License
 
-Released under the [GPLv2 license](https://github.com/mansoorbarri/roadster/blob/master/LICENSE.md).
+Released under the [MIT LICENSE](https://github.com/mansoorbarri/roadster/blob/master/LICENSE).
 
-<h3 align="center">This project is powered by <a href="https://hepton.uk">Hepton</a></h3>
