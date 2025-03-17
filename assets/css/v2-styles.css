@@ -59,3 +59,8 @@
 .submenu__item:hover > .submenu {
   display: block;
 }
+
+.has-submenu::after {
+  content: '▼'; /* Or use an SVG background image */
+  margin-left: 5px; /* Adjust spacing */
+}

@@ -17,7 +17,7 @@
     {{- range .Site.Menus.main }}
       {{- if not .Parent }}
         <li class="menu__item">
-          <a class="menu__link" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="menu__link{{ if .HasChildren }} has-submenu{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
           {{ template "submenu" . }}
         </li>
       {{- end }}
