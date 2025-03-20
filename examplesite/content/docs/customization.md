@@ -10,7 +10,6 @@ thumbnail:
   visibility:
     - list
 authorbox: true
-authors: ["rsmith"]
 sidebar: false
 pager: false
 weight: 2
