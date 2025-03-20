@@ -22,163 +22,6 @@ and more.
 
 <!--more-->
 
-## Examples 
-
-### Configuration Example
-```toml
-baseurl = "https://roadster.pages.dev"
-title = "Roadster"
-languageCode = "en-us"
-# paginate = "10" # DEPRECATED! Use pagination.pagerSize below
-theme = "roadster" 
-# disqusShortname = "" # DEPRECATED! Use .Services.Disqus.Shortname below
-# googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID below
-
-# Configure Pagination. See https://gohugo.io/templates/pagination/#configuration
-[pagination]
-  pagerSize = 10 # (int) The number of pages per pager. Default is 10
-
-[services]
-  [services.googleAnalytics]
-    id = 'G-MEASUREMENT_ID'  # Enable Google Analytics by entering your tracking id
-  [services.disqus]
-    shortname = 'your-disqus-shortname' # Enable Disqus by entering your Disqus shortname
-
-# Goldmark renders raw HTML mixed within the Markdown
-[markup.goldmark.renderer]
-  unsafe = true # N.B. This is unsafe unless the content is under your control.  Set to false if you don't mix HTML with markdown.
-
-[Params]
-  description = "John Doe's Personal blog about everything" # Site description. Used in meta description
-  copyright = "John Doe" # Footer copyright holder, otherwise will use site title
-  opengraph = true # Enable OpenGraph if true
-  schema = true # Enable Schema
-  twitter_cards = true # Enable Twitter Cards if true
-  readmore = false # Show "Read more" button in list if true
-  authorbox = true # Show authorbox at bottom of pages if true
-  toc = true # Enable Table of Contents
-  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
-  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
-  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
-  dateformat = "2006-01-02" # Change the format of dates
-  mathjax = true # Enable MathJax
-  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
-  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
-  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
-  customCSS = ["css/custom.css"] # Include custom CSS files
-  customJS = ["js/custom.js"] # Include custom JS files
-  CustomHeadHTML = "" # Add custom code in <head>
-  pagerSizeIndex = 2 # (int) The number of articles per pager. Default is 5
-
-[params.author]
-  name = "John Doe"
-  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
-  avatar = "img/avatar.png"
-
-  # DEPRECATED PARAMS
-  subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
-  highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
-
-[Params.style.vars]
-  highlightColor = "#e22d30" # Override highlight color
-
-  # Override font-family sets
-  # Take care of different quotes OR escaping symbols in these params if necessary
-  fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
-  # Secondary font-family set responsible for pre, code, kbd, and samp tags font
-  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
-
-[Params.logo]
-  image = "img/placeholder.png" # Logo image. Path relative to "static"
-  title = "Roadster" # Logo title, otherwise will use site title
-  subtitle = "Just another site" # Logo subtitle
-
-[Params.thumbnail]
-  visibility = ["list", "post"] # Control thumbnail visibility
-
-[Params.sidebar]
-  home = "right" # Configure layout for home page
-  list = "left"  # Configure layout for list pages
-  single = false # Configure layout for single pages
-  # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
-
-[Params.widgets]
-  recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  categories_counter = false # Enable counter for each category in "Categories" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget
-
-[Params.widgets.social]
-  cached = false # activate cache if true
-  # Enable parts of social widget
-  facebook = "username"
-  x = "username"
-  instagram = "username"
-  linkedin = "username"
-  telegram = "username"
-  github = "username"
-  gitlab = "username"
-  bitbucket = "username"
-  email = "example@example.com"
-  discourse = "username"
-  mastodon = "username"
-
-# Custom social links
-[[Params.widgets.social.custom]]
-  title = "Youtube"
-  url = "https://youtube.com/user/username"
-  icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
-  rel = "noopener noreferrer" # Set to false to remove the rel attribute
-
-[[Params.widgets.social.custom]]
-  title = "My Home Page"
-  url = "https://example.com"
-
-[Params.widgets.search]
-  cached = false # activate cache if true
-  url = "https://google.com/search"
-  [Params.widgets.search.input]
-    name = "sitesearch"
-    pre = ""
-
-[taxonomies]
-  author = "authors" 
-  tag = "tags"
-  category = "categories"
-```
-
-### Post Frontmatter Example
-```yaml
----
-# Common-Defined params
-title: "Example article title"
-date: "2017-08-21"
-description: "Example article description"
-categories:
-  - "Category 1"
-  - "Category 2"
-tags:
-  - "Test"
-  - "Another test"
-menu: main # Optional, add page to a menu. Options: main, side, footer
-
-# Theme-Defined params
-thumbnail: "img/placeholder.png" # Thumbnail image
-lead: "Example lead - highlighted near the title" # Lead text
-comments: false # Enable Disqus comments for specific page
-authorbox: true # Enable authorbox for specific page
-authors: ["exampleauthor"] # Assuming you have a author profile in /content/authors/exampleauthor/_index.md
-pager: true # Enable pager navigation (prev/next) for specific page
-toc: true # Enable Table of Contents for specific page
-mathjax: true # Enable MathJax for specific page
-sidebar: "right" # Enable sidebar (on the right side) per page
-widgets: # Enable sidebar widgets in given order per page
-  - "search"
-  - "recent"
-  - "taglist"
----
-```
-
 This section will mainly cover customization settings that are unique to this theme. If something is not covered here,
 there's a good chance it is covered somewhere in [Hugo docs](https://gohugo.io/documentation/).
 
@@ -246,75 +89,6 @@ multilingual sites should be careful and check that everything translates as exp
 You can also use a predefined layout, like `:date_full`, and it will output localized dates or times. For additional
 information about localized dates and possible date/time formatting layouts, please see
 [Hugo: time.Format](https://gohugo.io/functions/dateformat/).
-
-### Multi-Author Support
-#### Adding Multiple Authors to a Post
-To attribute a post to multiple authors, add an `authors` array to the frontmatter of the post. For example:
-
-```toml
----
-title: "Example Blog Post"
-date: 2024-01-15
-authors: ["rsmith", "jdoe"]
----
-```
-
-Each author identifier (e.g. `rsmith`, `jdoe`) should correspond to an unique author profile. If no additional information is provided for the author, the system will automatically generate a basic author page that lists all posts by that author.
-
-#### Creating Author Pages
-You can create custom author pages to include additional details about each author, such as a photo, contact information, and links to social profiles.
-
-**File Structure**
-Author pages should be placed in the `/content/authors/` directory. For example:
-
-```toml
-content/
-└── authors/
-    ├── rsmith/
-    │   └── _index.md
-    └── jdoe/
-        └── _index.md
-```
-
-**Frontmatter for Author Pages**  
-The frontmatter for an author page supports detailed customization. Here is an example:
-
-```yaml
----
-title: "Robert Smith"
-date: 2024-03-19T17:35:59.000Z
-draft: false
-siteAuthor: false
-params:
-  name:
-    first: "Robert"
-    last: "Smith"
-    prefix: "Dr."
-  contact:
-    email: "rsmith@example.org"
-    phone: "+1 202-555-1213"
-  bio: "" # A short description of the author that appears below an article an on the author-page.
-  social:
-    - service: "GitHub"
-      link: "https://github.com/rsmith"
-    - service: "Facebook"
-      link: "https://www.facebook.com/rsmith"
----
-
-This page provides information about Robert Smith and includes a list of blog posts written by him.
-```
-
-**Explanation of Fields**
-
-- `title`: The display name of the author (used in titles and headings).
-- `params.name`: Allows you to specify the author's full name with optional prefixes like "Dr." or "Prof."
-- `params.contact`: Contact information, such as email and phone number.
-- `params.social`: A list of social media services and corresponding profile links. Expandable as long as the SVG file for the service exists in `layouts/partials/svg/`, named after the service (e.g., `github.svg`).
-
-#### Default Author Pages
-If an author page is not explicitly created, the system will generate a default page for that author, listing all posts attributed to their identifier without additional profile details.
-
-**Important**: Creating a custom author page is optional. Only create one if you need to include detailed information, such as a profile picture, biography, or social links.
 
 ### Thumbnail visibility
 
@@ -396,6 +170,7 @@ sections in the example below.
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
   categories_counter = false # Enable counter for each category in "Categories" widget
   tags_counter = false # Enable counter for each tag in "Tags" widget
+    tags_sort = "desc" # or "asc" for sorting the tags list in descending or ascending order. By default the list is sorted in alphabetical order.
 ```
 
 ```toml
@@ -410,9 +185,6 @@ sections in the example below.
   gitlab = "username"
   bitbucket = "username"
   email = "example@example.com"
-  discourse = "username"
-  mastodon = "username"
-  bluesky = "username"
 ```
 
 ### Widget caching
