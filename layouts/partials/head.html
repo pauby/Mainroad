@@ -17,6 +17,7 @@
 {{- end -}}
 {{- if not $server }}
     {{ template "_internal/google_analytics.html" . }}
+    {{ partial "goat_counter.html" . }}
 {{- end }}
 
 {{ if .Site.Params.CustomHeadHTML }}
